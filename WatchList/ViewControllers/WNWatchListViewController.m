@@ -29,16 +29,25 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
-
+        
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Add gradient effect to the Table view header view.
+    UIView *view = _watchListView.tableHeaderView;
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    
+    gradient.frame = view.bounds;
+    gradient.colors = @[(id)[UIColor colorWithRed:243.0/255.0 green:243.0/255.0 blue:243.0/255.0 alpha:1.0].CGColor, (id)[UIColor colorWithRed:217.0/255.0 green:217.0/255.0 blue:217.0/255.0 alpha:1.0].CGColor];
+    [view.layer insertSublayer:gradient atIndex:0];
+    
     // Do any additional setup after loading the view, typically from a nib.
     [ self loadWatchList];
-
+    
 }
 
 -(WNWatchListManager *)watchlistManager
@@ -54,12 +63,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Fetch the watchlist and reload the list view.
 
 -(void)loadWatchList
 {
-    //Fetch the watchlist and reload the list view.
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-
+    
     __weak WNWatchListViewController *weakSelf = self;
     
     [self.watchlistManager fetchWatchList:^(NSArray *watchList, NSError *error)
@@ -74,7 +83,6 @@
              dispatch_async(dispatch_get_main_queue(), ^{
                  [_watchListView reloadData];
                  [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-
              });
          }
      }];
@@ -168,7 +176,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
-#pragma WNWatchlistTableViewCellDelegate Method implementation
+#pragma WNWatchlistTableViewCellDelegate method implementation
+// handle tap on the Symbol and show the market capitalisation on an Alert Controller
 -(void)didTapSymbolInCell:(WNWatchlistTableViewCell *)inCell
 {
     NSIndexPath *indexPath = [_watchListView indexPathForCell:inCell];

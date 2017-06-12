@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5624935C1EEE63F400F73D59 /* WatchListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5624F4EC1EED26B00016A6EB /* WatchListTests.m */; };
 		562493641EEE693700F73D59 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 562493621EEE693700F73D59 /* MBProgressHUD.m */; };
 		5624F49D1EEB9DC40016A6EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5624F49C1EEB9DC40016A6EB /* main.m */; };
 		5624F4A61EEB9DC40016A6EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5624F4A41EEB9DC40016A6EB /* Main.storyboard */; };
@@ -21,6 +20,8 @@
 		565768911EEE56E70008B7E6 /* WNWatchlistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 565768891EEE56E70008B7E6 /* WNWatchlistTableViewCell.m */; };
 		565768921EEE56E70008B7E6 /* WNWatchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5657688C1EEE56E70008B7E6 /* WNWatchListViewController.m */; };
 		565768951EEE57590008B7E6 /* WNUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 565768941EEE57590008B7E6 /* WNUtilities.m */; };
+		5669E6251EEEC7EB00EB2C0D /* WNWatchListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 565768811EEE56E70008B7E6 /* WNWatchListManager.m */; };
+		5669E6261EEEC80900EB2C0D /* WatchListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5624F4EC1EED26B00016A6EB /* WatchListTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -314,7 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5624935C1EEE63F400F73D59 /* WatchListTests.m in Sources */,
+				5669E6261EEEC80900EB2C0D /* WatchListTests.m in Sources */,
+				5669E6251EEEC7EB00EB2C0D /* WNWatchListManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
