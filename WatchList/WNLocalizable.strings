@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  WatchList
+
+  Created by Gautham S Shetty on 6/11/17.
+  Copyright © 2017 Gautham S Shetty. All rights reserved.
+*/
+
+"Market_Capitalization_Alert_Message"="Market Capitalization is: %@";
+"Request_Invalid"="Request Invalid";
+"Request_Invalid_Reason"="The watchlist fetch returned invalid data";
