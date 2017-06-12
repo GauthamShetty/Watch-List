@@ -20,7 +20,7 @@
     
     self.change = ([inStockData objectForKey:kChange]) ? [NSNumber numberWithFloat:[[inStockData objectForKey:kChange] floatValue]]: [NSNumber numberWithFloat:0.0];
     self.percentageChange = ([inStockData objectForKey:kPercentageChange]) ? [NSNumber numberWithFloat:[[inStockData objectForKey:kPercentageChange] floatValue]]: [NSNumber numberWithFloat:0.0];
-    self.averageDailyVolume = ([inStockData objectForKey:kAverageDailyVolume]) ? [NSNumber numberWithLong:[[inStockData objectForKey:kAverageDailyVolume] longLongValue]] : [NSNumber numberWithLongLong:0];
+    self.averageDailyVolume = ([inStockData objectForKey:kAverageDailyVolume]) ? [NSNumber numberWithLongLong:[[inStockData objectForKey:kAverageDailyVolume] longLongValue]] : [NSNumber numberWithLongLong:0];
     
     self.currency = [inStockData objectForKey:kCurrency];
     self.marketCapitalization = [inStockData objectForKey:kMarketCapitalization];
